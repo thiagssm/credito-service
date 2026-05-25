@@ -11,6 +11,7 @@ public static class DependencyInjection
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
         services.AddScoped<ICreditoApplicationService, CreditoApplicationService>();
+        services.AddScoped<ICreditoMessageProcessor, CreditoMessageProcessor>();
         services.AddScoped<IValidator<CreditoConstituidoInputModel>, CreditoConstituidoInputModelValidator>();
 
         return services;
